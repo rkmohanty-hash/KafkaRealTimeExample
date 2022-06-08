@@ -1,0 +1,8 @@
+server:
+  port: 62560
+  servlet:    context-path: /adapter/btc/v1/publisher/
+  http2:
+    enabled: true
+spring:  application:    name: applicationName  kafka:    producer:      broker: localhost:9092      group-id: tx_parameter_events
+      destination-topic: kaf_tx_paramdata_events
+      bcaTermsTopic: kaf_tx_btc_events_sg_dev1    
